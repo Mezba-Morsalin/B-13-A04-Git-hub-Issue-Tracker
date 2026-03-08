@@ -39,10 +39,10 @@
   <!-- Header section ended -->
  <!-- Btn Section Started -->
   <section class="w-10/12 mx-auto mt-20 bg-white p-5 shadow rounded-xl">
-    <div class="flex gap-3">
-        <button onclick="showAll()" class="btn btn-primary">All</button>
-        <button onclick="showOpen()" class="btn btn-outline">Open</button>
-        <button onclick="showClosed()" class="btn btn-outline">Closed</button>
+    <div id="btn-container" class="flex gap-3">
+        <button id="all-btn" onclick="showAll()" class="btn btn-primary">All</button>
+        <button id="open-btn" onclick="showOpen()" class="btn btn-outline">Open</button>
+        <button id="closed-btn" onclick="showClosed()" class="btn btn-outline">Closed</button>
     </div>
   </section>
   <!-- Btn Section Ended -->
@@ -68,6 +68,40 @@
   </section>
   <!-- Issue Section Ended-->
   <!-- Issue Cards Section Started -->
+   <!-- Modal -->
+    <!-- Open the modal using ID.showModal() method -->
+<button class="btn hidden" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box space-y-3">
+    <h3 class="text-2xl font-bold text-[#1F2937]">Fix broken image uploads</h3>
+    <ul class="list-disc flex gap-8 items-center">
+      <li class="bg-green-500 text-white rounded-full  px-3">Opened</li>
+      <li class="text-[#64748B] text-[14px]">Opened by Fahim Ahmed</li>
+      <li class="text-[#64748B] text-[14px]">22/02/2026</li>
+    </ul>
+    <div class="flex gap-4">
+      <p class="bg-red-100 text-red-500 border border-red-500 rounded-full py-1 px-3">BUG</p>
+      <p class="bg-yellow-100 text-orange-500 border border-red-500 rounded-full py-1 px-3">HELP WANTED</p>
+    </div>
+    <p class="py-4 text-[#64748B]">The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.</p>
+    <div class="flex gap-40 items-center bg-base-300 rounded-xl p-4">
+      <div class="space-y-2">
+        <p class="text-[#64748B]">Assignee:</p>
+        <h4 class="text-base font-semibold text-[#1F2937]">Fahim Ahmed</h4>
+      </div>
+      <div class="space-y-2">
+        <p class="text-[#64748B]">Priority:</p>
+        <p class="bg-red-600 text-white py-1 px-3 rounded-full">high</p>
+      </div>
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
   <section class="w-10/12 mx-auto bg-base-200 mt-1 shadow p-6 rounded-xl">
     <div id="card-container" class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
 
